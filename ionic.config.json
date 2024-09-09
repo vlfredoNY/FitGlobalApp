@@ -1,0 +1,7 @@
+{
+  "name": "fGlobal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
