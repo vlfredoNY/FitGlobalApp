@@ -1,0 +1,38 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="register-background">
+    <div class="register-container">
+      <ion-card>
+        <div class="logo-container">
+          <img src="assets/icon/gorila.svg" class="logo" alt="logo">
+        </div>
+        <ion-card-header>
+          <ion-card-title>Unete a Nosotros!</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item class="custom-input">
+            <ion-label position="stacked" class="mail-label">Correo Electrónico</ion-label>
+            <ion-input type="email" name="email" [(ngModel)]="email" ngDefaultControl required placeholder="Ingrese un Email..."></ion-input>
+          </ion-item>
+          <ion-item class="custom-input">
+            <ion-label position="stacked" class="password-label">Contraseña</ion-label>
+            <ion-input type="password" name="password" [(ngModel)]="password" ngDefaultControl required placeholder="Ingrese una Contraseña..."></ion-input>
+          </ion-item>
+          <ion-item class="custom-input">
+            <ion-label position="stacked" class="password-label">Confirma Contraseña</ion-label>
+            <ion-input type="password" name="password" [(ngModel)]="password" ngDefaultControl required placeholder="Confirma tu Contraseña..."></ion-input>
+          </ion-item>
+          <div class="button-group">
+            <ion-button color="warning" expand="block" (click)="register()">Registrame</ion-button>
+            <ion-button color="warning" expand="block" fill="outline" (click)="goToLogin()">Iniciar Sesion</ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

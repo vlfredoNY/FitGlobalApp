@@ -1,0 +1,88 @@
+.login-background {
+    background-image: url('/assets/logingym.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  ion-card {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(110, 108, 108, 0.226); /* Fondo transparente */
+    backdrop-filter: blur(10px); /* Efecto de difuminado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    border-radius: 10px;
+  }
+
+  ion-card-title {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: antiquewhite;
+  }
+
+  .custom-input {
+    --background: transparent; /* Fondo transparente */
+    --border-radius: 30px; /* Bordes redondeados */
+    --padding-start: 10px;
+    --padding-end: 15px;
+    --min-height: 40px; /* Altura ajustada */
+    --highlight-color-focused: black;
+    margin-bottom: 15px;
+  }
+  
+  ion-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* Color del texto para mayor visibilidad */
+    margin-bottom: 5px;
+  }
+  
+  ion-input {
+    --background: black;
+    --border-radius: 30px;
+    color: aliceblue;
+    padding: 10px;
+    --padding-start: 10px; /* Padding para el texto dentro del input */
+  --padding-end: 10px; 
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  ion-button {
+    --border-radius: 30px;
+    width: 48%; /* Ambos botones ocupan 48% del espacio */
+    
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+
+  .logo {
+    max-width: 50%; /* Asegura que el logo se ajuste dentro del contenedor */
+    height: auto;
+    filter: invert(1);
+  }
+
+  .password-label {
+    color: white !important;
+  }
+
+  .mail-label {
+    color: white !important;
+  }

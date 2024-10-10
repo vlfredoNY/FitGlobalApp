@@ -1,17 +1,47 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <img src="assets/icon/gorila.svg" alt="Logo" style="width: 50px; height: 50px;">
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Ejercicios
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+    <ion-toolbar color="dark">
+      <ion-title size="large">Lista de Ejercicios</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-item>
+    <ion-label>Selecciona un grupo muscular</ion-label>
+    <ion-select (ionChange)="onSelectChange($event)">
+      <ion-select-option value="back">Espalda</ion-select-option>
+      <ion-select-option value="chest">Pecho</ion-select-option>
+      <ion-select-option value="upper legs">Piernas</ion-select-option>
+      <ion-select-option value="upper arms">Brazo superior</ion-select-option>
+      <ion-select-option value="cardio">Cardio</ion-select-option>
+      <ion-select-option value="waist">Abdomen</ion-select-option>
+      <ion-select-option value="shoulders">Hombros</ion-select-option>
+      <!-- Añade más opciones aquí -->
+    </ion-select>
+  </ion-item>
+
+  <!-- Contenido principal donde se muestran los ejercicios -->
+  <div id="main-content">
+    <ion-list>
+      <ion-item *ngFor="let exercise of exercises; trackBy: trackById">
+        <ion-card color="warning">
+          <img [src]="exercise.gifUrl" [alt]="exercise.name">
+          <ion-card-header>
+            <ion-card-title>{{exercise.bodyPart}}</ion-card-title>
+            <ion-card-subtitle>{{exercise.equipment}}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

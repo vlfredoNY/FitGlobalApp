@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://v2.exercisedb.io",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+   
